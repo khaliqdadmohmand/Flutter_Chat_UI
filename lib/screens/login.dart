@@ -1,4 +1,5 @@
 import 'package:chat/global.dart';
+import 'package:chat/screens/listing.dart';
 import 'package:chat/screens/signup.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -119,7 +120,10 @@ class LoginScreen extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0))),
                           onPressed: () {
-                            print('Button Clicked.');
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ListingScreen()));
                           },
                           textColor: Colors.white,
                           color: buttonColor,
